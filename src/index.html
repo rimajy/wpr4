@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+
+
+    <title>JS-pizza</title>
+</head>
+<body>
+<main id="root">
+    <section class="pizza-select">
+        <nav class="nav-bar">
+            <div class="nav-bar__logo">
+                <p class="nav-bar__logo-pizza">
+                    PIZZA
+                </p>
+                <p class="nav-bar__logo-kma">
+                    KMA
+                </p>
+            </div>
+            <div class="nav-bar__contact-info">
+                <div class="nav-bar__contact-info-top">
+                    <div>
+                        <p class="nav-bar__contact-info-tel">
+                            (044) 222 5 222
+                        </p>
+                        <p class="nav-bar__contact-info-time">
+                            24 години/ 7 днів на тиждень
+                        </p>
+                        <p class="nav-bar__contact-info-free-delivery">
+                            Безкоштовна доставка піци
+                        </p>
+                    </div>
+                    <a href="/login" class="button nav-bar__contact-info-login-button">Ввійти</a>
+                </div>
+                <div class="nav-bar__contact-info-bottom">
+                    <p class="nav-bar__contact-info-category">
+                        Піца
+                    </p>
+                    <a href="/login" class="button nav-bar__contact-info-login-button">Ввійти</a>
+                </div>
+            </div>
+        </nav>
+        <div class="pizza-select__filter">
+            <p class="pizza-select__filter-title">
+                Усі піци
+                <span>8</span>
+            </p>
+            <div class="pizza-select__navigation">
+                <div class="checkbox">
+                    <input type="checkbox" id="all" checked>
+                    <label for="all">
+                        Усі
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="with-meat">
+                    <label for="with-meat">
+                        М'ясні
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="with-ananas">
+                    <label for="with-ananas">
+                        З ананасами
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="with-mushrooms">
+                    <label for="with-mushrooms">
+                        З грибами
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="with-seafood">
+                    <label for="with-seafood">
+                        З морепродуктами
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="vega">
+                    <label for="vega">
+                        Вега
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-select__content-wrapper">
+            <div class="pizza new">
+                <div class="pizza__image">
+                    <img src="./assets/pizza_carbonara.webp" alt="Піца карбонара">
+                </div>
+                <div class="pizza__info">
+                    <p class="pizza__title">Карбонара</p>
+                    <span class="pizza__type">М'ясна піца</span>
+                    <p class="pizza__ingredients">Моцарелла, сир пармезан, яйця, бекон, томатний соус</p>
+                </div>
+                <div class="pizza__prices">
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">30</span>
+                        <span class="pizza__price-weight">400</span>
+                        <span class="pizza__price-sum">189</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">40</span>
+                        <span class="pizza__price-weight">700</span>
+                        <span class="pizza__price-sum">299</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pizza popular">
+                <div class="pizza__image">
+                    <img src="./assets/pizza_chisburger.webp" alt="Піца чізбургер">
+                </div>
+                <div class="pizza__info">
+                    <p class="pizza__title">Чізбургер</p>
+                    <span class="pizza__type">М'ясна піца</span>
+                    <p class="pizza__ingredients">Соус томатний, моцарелла, цибуля червона маринована, чеддер, огірок корнішон,
+                        телятина </p>
+                </div>
+                <div class="pizza__prices">
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">30</span>
+                        <span class="pizza__price-weight">470</span>
+                        <span class="pizza__price-sum">115</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">40</span>
+                        <span class="pizza__price-weight">780</span>
+                        <span class="pizza__price-sum">169</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pizza">
+                <div class="pizza__image">
+                    <img src="./assets/pizza_margorita.webp" alt="Піца маргарита">
+                </div>
+                <div class="pizza__info">
+                    <p class="pizza__title">Маргарита</p>
+                    <span class="pizza__type">Вега піца</span>
+                    <p class="pizza__ingredients">Сир моцарелла, сир домашній,
+                        помідори,
+                        базилік, оливкова олія, соус томатний</p>
+                </div>
+                <div class="pizza__prices">
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">30</span>
+                        <span class="pizza__price-weight">370</span>
+                        <span class="pizza__price-sum">89</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pizza">
+                <div class="pizza__image">
+                    <img src="./assets/pizza_neopolitana.webp" alt="Піца неополітана">
+                </div>
+                <div class="pizza__info">
+                    <p class="pizza__title">Неополітана</p>
+                    <span class="pizza__type">М'ясна піца</span>
+                    <p class="pizza__ingredients">Моцарелла, пармезан, базилік, паста з помідорів, свинне салямі, брезаола,
+                        сир сорту качкавал</p>
+                </div>
+                <div class="pizza__prices">
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">30</span>
+                        <span class="pizza__price-weight">370</span>
+                        <span class="pizza__price-sum">99</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">40</span>
+                        <span class="pizza__price-weight">660</span>
+                        <span class="pizza__price-sum">169</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pizza">
+                <div class="pizza__image">
+                    <img src="./assets/pizza_po_selyanski.webp" alt="Піца по селянськи">
+                </div>
+                <div class="pizza__info">
+                    <p class="pizza__title">По селянськи</p>
+                    <span class="pizza__type">М'ясна піца</span>
+                    <p class="pizza__ingredients">Бекон, моцарелл,а печериці, солоні огірочки, томати, томатний соус</p>
+                </div>
+                <div class="pizza__prices">
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">30</span>
+                        <span class="pizza__price-weight">370</span>
+                        <span class="pizza__price-sum">241</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">40</span>
+                        <span class="pizza__price-weight">660</span>
+                        <span class="pizza__price-sum">291</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pizza">
+                <div class="pizza__image">
+                    <img src="./assets/pizza_tom_yam.webp" alt="Піца том-ям">
+                </div>
+                <div class="pizza__info">
+                    <p class="pizza__title">Том-ям</p>
+                    <span class="pizza__type">М'ясна піца</span>
+                    <p class="pizza__ingredients">Вершковий Соус Альфредо (Основа), петрушка, мідії, моцарелла</p>
+                </div>
+                <div class="pizza__prices">
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">30</span>
+                        <span class="pizza__price-weight">370</span>
+                        <span class="pizza__price-sum">255</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                    <div class="pizza__price">
+                        <span class="pizza__price-diameter">40</span>
+                        <span class="pizza__price-weight">660</span>
+                        <span class="pizza__price-sum">320</span>
+                        <button class="button pizza__price-buy-button">Купити</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="summary">
+        <div class="summary__top">
+            <p>Замовлення <span>3</span></p>
+            <button class="summary__clear-button">Очистити замовлення</button>
+        </div>
+        <div class="summary__selected-pizza-wrapper">
+            <div class="selected-pizza" style="background-image: url('./assets/pizza_carbonara.webp')">
+                <p class="selected-pizza__title">
+                    Карбонара (Мала)
+                </p>
+                <div class="selected-pizza__details">
+                    <p class="selected-pizza__diameter">30</p>
+                    <p class="selected-pizza__weight">400</p>
+                </div>
+                <div class="selected-pizza__bottom-panel">
+                    <p class="selected-pizza__price">356</p>
+                    <div class="selected-pizza__control">
+                        <button class="selected-pizza__decrease">-</button>
+                        <span class="selected-pizza__count">4</span>
+                        <button class="selected-pizza__increase">+</button>
+                        <button class="selected-pizza__remove">×</button>
+                    </div>
+                </div>
+            </div>
+            <div class="selected-pizza" style="background-image: url('./assets/pizza_margorita.webp')">
+                <p class="selected-pizza__title">
+                    Маргарита
+                </p>
+                <div class="selected-pizza__details">
+                    <p class="selected-pizza__diameter">30</p>
+                    <p class="selected-pizza__weight">445</p>
+                </div>
+                <div class="selected-pizza__bottom-panel">
+                    <p class="selected-pizza__price">356</p>
+                    <div class="selected-pizza__control">
+                        <button class="selected-pizza__decrease">-</button>
+                        <span class="selected-pizza__count">4</span>
+                        <button class="selected-pizza__increase">+</button>
+                        <button class="selected-pizza__remove">×</button>
+                    </div>
+                </div>
+            </div>
+            <div class="selected-pizza" style="background-image: url('./assets/pizza_tom_yam.webp')">
+                <p class="selected-pizza__title">
+                    Том-ям (Велика)
+                </p>
+                <div class="selected-pizza__details">
+                    <p class="selected-pizza__diameter">40</p>
+                    <p class="selected-pizza__weight">660</p>
+                </div>
+                <div class="selected-pizza__bottom-panel">
+                    <p class="selected-pizza__price">640</p>
+                    <div class="selected-pizza__control">
+                        <button class="selected-pizza__decrease">-</button>
+                        <span class="selected-pizza__count">2</span>
+                        <button class="selected-pizza__increase">+</button>
+                        <button class="selected-pizza__remove">×</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="summary__process">
+            <div class="summary__process-top">
+                <p class="summary__process-title">Сума замолення</p>
+                <p class="summary__process-sum">924 грн</p>
+            </div>
+            <button class="button summary__buy-button">Замовити</button>
+        </div>
+    </section>
+
+    <div class="badge">
+        <p class="badge__message">
+            цього тижня на все
+        </p>
+        <p class="badge__sale">
+            -20%
+        </p>
+    </div>
+</main>
+</body>
+</html>

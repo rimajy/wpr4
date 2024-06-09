@@ -1,0 +1,775 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+}
+
+#root {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+/*-----------------------------------------------------*/
+.badge {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    background-color: var(--color-orange);
+    max-width: 120px;
+    padding: 10px 15px;
+    border: 2px solid var(--color-orange-dark);
+}
+
+.badge:before, .badge:after {
+    content: "";
+    position: absolute;
+    width: 51%;
+    height: 15%;
+    top: -11%;
+    right: -2px;
+    transform: skewY(-12deg);
+    background-color: var(--color-orange);
+    border: 2px solid var(--color-orange-dark);
+    border-right: none;
+    border-bottom: none;
+}
+.badge:before {
+    transform: skewY(12deg);
+    left: -1px;
+}
+
+.badge:after{
+    border-left: none;
+    border-right: 2px solid var(--color-orange-dark);
+}
+
+.badge__message {
+    color: var(--color-white);
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--color-gray);
+}
+
+.badge__sale {
+    padding-top: 10px;
+    color: var(--color-white);
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media screen and (max-width: 1100px){
+    .badge {
+        max-width: 100px;
+        padding: 8px 12px;
+    }
+
+    .badge__message {
+        font-size: 16px;
+    }
+
+    .badge__sale {
+        font-size: 16px;
+    }
+}
+/*-----------------------------------------------------*/
+.nav-bar {
+    position: sticky;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0 10px;
+    z-index: 9999;
+}
+
+.nav-bar__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 30px;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    border: 2px solid var(--color-orange-dark);
+}
+
+.nav-bar__logo:before, .nav-bar__logo:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    bottom: -15%;
+    right: -2px;
+    transform: skewY(12deg);
+    background-color: var(--color-orange);
+    border: 2px solid var(--color-orange-dark);
+    border-top: none;
+    border-left: none;
+}
+.nav-bar__logo:before {
+    left: -1px;
+    transform: rotateY(180deg) skewY(12deg);;
+}
+
+.nav-bar__logo-pizza {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.nav-bar__logo-kma {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.nav-bar__contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--color-gray);
+    padding: 10px 25px;
+    width: 100%;
+}
+
+.nav-bar__contact-info-top {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid var(--color-gray);
+}
+.nav-bar__contact-info-top > div {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.nav-bar__contact-info-tel {
+    font-size: 28px;
+}
+
+.nav-bar__contact-info-time{
+    font-size: 14px;
+}
+
+.nav-bar__contact-info-free-delivery{
+    font-size: 20px;
+}
+
+.nav-bar__contact-info-bottom {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 0 8px 0;
+}
+
+.nav-bar__contact-info-category{
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nav-bar__contact-info-bottom .nav-bar__contact-info-login-button {
+    display: none;
+}
+
+@media screen and (max-width: 1500px){
+    .nav-bar__contact-info-free-delivery {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .nav-bar__contact-info-time {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 842px) {
+    .nav-bar__contact-info-category{
+        display: none;
+    }
+
+    .nav-bar__contact-info-top .nav-bar__contact-info-login-button{
+        display: none;
+    }
+
+    .nav-bar__contact-info-bottom .nav-bar__contact-info-login-button {
+        display: block;
+        margin: 0 0 0 auto;
+    }
+
+    .nav-bar__contact-info-tel {
+        font-size: 14px;
+    }
+
+    .nav-bar__contact-info {
+        padding: 5px 10px;
+    }
+
+    .nav-bar__logo {padding: 4px 20px;}
+    .nav-bar__contact-info-top {
+        padding-bottom: 3px;
+    }
+
+    .nav-bar__logo:before, .nav-bar__logo:after {
+        height: 20%;
+        bottom: -15%;
+    }
+
+    .nav-bar__logo-pizza {
+        font-size: 16px;
+    }
+
+    .nav-bar__logo-kma {
+        font-size: 20px;
+    }
+
+    .nav-bar__logo:after {
+        right: -0.9%;
+    }
+
+    .nav-bar__contact-info-bottom{
+        padding: 0;
+    }
+
+}
+/*-----------------------------------------------------*/
+.pizza-select {
+    background-color: var(--color-white-2);
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.pizza-select::-webkit-scrollbar{
+    display: none;
+}
+
+.pizza-select__content-wrapper {
+    display: grid;
+    max-width: 1600px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(auto, 1fr);
+    padding: 25px;
+    gap: 25px;
+}
+
+.pizza {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray);
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pizza.new, .pizza.popular{
+    position: relative;
+}
+
+.pizza.new:after, .pizza.popular:after {
+    content: "Нова";
+    position: absolute;
+    background-color: var(--color-red);
+    padding: 0.4em 0.6em;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray);
+    right: -0.6em;
+    top: -0.6em;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.pizza.popular:after{
+    content: "Популярна";
+    background-color: var(--color-green);
+}
+
+.pizza__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pizza__image > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pizza__title {
+    color: var(--color-orange-dark);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.pizza__info {
+
+}
+
+.pizza__ingredients {
+    margin: 5px 0 0 0;
+}
+
+.pizza__type {
+    color: var(--color-gray);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.pizza__prices{
+    margin: auto 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    gap: 10px;
+}
+
+.pizza__price{
+    margin: 0 auto;
+}
+
+.pizza__price span {
+    display: block;
+    text-align: center;
+}
+
+.pizza__price-diameter {
+    font-size: 16px;
+}
+.pizza__price-diameter:before {
+    content: "⌀";
+    position: relative;
+    padding: 0 4px 0 0;
+    font-size: 1.6em;
+    bottom: -0.07em;
+}
+
+.pizza__price-buy-button {
+
+}
+
+.pizza__price-sum {
+    margin: 0.4em 0 0.25em 0;
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--color-black-light);
+}
+.pizza__price-sum::after{
+    content: "грн.";
+    position: relative;
+    font-size: 0.4em;
+    margin-top: -0.24em;
+    display: block;
+}
+
+.pizza__price-weight {
+    font-size: 16px;
+}
+
+.pizza-select__filter{
+    padding: 15px 0 10px;
+}
+
+.pizza-select__filter-title {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--color-black-light);
+}
+.pizza-select__filter-title span {
+    font-size: 0.4em;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    border-radius: 100%;
+    padding: 0.2em 0.6em;
+    vertical-align: middle;
+}
+.pizza-select__navigation{
+    margin: 20px 0 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1300px){
+    .pizza-select__content-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .pizza-select__content-wrapper {
+        max-width: 400px;
+        grid-template-columns: 1fr;
+    }
+
+    .pizza__image > img {
+        width: 60%;
+    }
+}
+/*-----------------------------------------------------*/
+.summary {
+    background-color: var(--color-white);
+    width: 400px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0 45px var(--color-black);
+    z-index: 9999999;
+}
+
+.summary__top {
+    padding: 2.78em 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.summary__top p {
+    font-size: 22px;
+    font-weight: 600;
+}
+.summary__top p span {
+    color: var(--color-white);
+    padding: 3px 8px;
+    border-radius: 100%;
+    font-size: 0.8em;
+    background-color: var(--color-orange);
+}
+
+.summary__clear-button{
+    font-size: 14px;
+    color: var(--color-gray);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease-in-out all;
+}
+
+.summary__clear-button:hover{
+    color: var(--color-red);
+}
+
+
+.summary__selected-pizza-wrapper {
+    background-color: var(--color-white-2);
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.summary__selected-pizza-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.selected-pizza{
+    padding: 20px 80px 20px 20px;
+
+    background-repeat: no-repeat;
+    background-size: 120px;
+    background-position: 124% center;
+
+    border-top: 1px solid var(--color-gray);
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.selected-pizza__title{
+    color: var(--color-orange);
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.selected-pizza__details{
+    display: flex;
+    margin: 8px 0 5px;
+    gap: 20px;
+    align-items: center;
+}
+
+.selected-pizza__diameter:before{
+    content: "⌀";
+    font-size: 1.3em;
+    line-height: 0;
+}
+
+.selected-pizza__weight{
+    vertical-align: center;
+}
+
+.selected-pizza__bottom-panel{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.selected-pizza__price{
+    font-size: 19px;
+    font-weight: 600;
+}
+.selected-pizza__price:after{
+    content: "грн";
+}
+
+.selected-pizza__control{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.selected-pizza__count{
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0.7em;
+}
+
+.selected-pizza__control button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.selected-pizza__decrease{
+    background: var(--red-gradient);
+    border: 1px solid var(--color-red);
+    font-size: 32px;
+    padding: 0 0 0.1em 0;
+    color: var(--color-white);
+}
+
+.selected-pizza__increase{
+    background: var(--green-gradient);
+    border: 1px solid var(--color-green);
+    font-size: 26px;
+    padding: 0 0 0.05em 0;
+    color: var(--color-white);
+}
+
+.selected-pizza__remove {
+    background: var(--gray-gradient);
+    color: var(--color-orange);
+    border: 1px solid var(--color-gray);
+    font-size: 26px;
+    margin: 0 0 0 auto;
+    padding: 0 0 0.1em 0;
+}
+
+.summary__process{
+    margin: auto 0 0 0;
+    padding: 15px 10px 10px;
+    border-top: 1px solid var(--color-gray);
+}
+.summary__process-top {
+    display: flex;
+    justify-content: space-between;
+}
+.summary__process-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.summary__process-sum {
+    font-size: 22px;
+    font-weight: 600;
+}
+.summary__buy-button.button{
+    font-size: 22px;
+    width: 90%;
+    margin: 20px auto 20px;
+}
+
+@media screen and (max-width: 1270px) {
+    .summary {
+        width: 370px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .summary {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 842px) {
+
+    .summary {
+        width: 300px;
+    }
+
+    .summary__top{
+        padding: 1.84em 15px;
+        font-size: 18px;
+    }
+
+    .summary__top p {
+        font-size: 14px;
+    }
+
+    .summary__clear-button{
+        font-size: 12px;
+    }
+
+
+    .selected-pizza{
+        padding: 15px 60px 15px 15px;
+
+        background-size: 100px;
+        background-position: 125% center;
+    }
+
+    .selected-pizza__title{
+        font-size: 22px;
+    }
+
+    .selected-pizza__details{
+        margin: 5px 0 3px;
+        gap: 10px;
+    }
+
+
+
+
+    .selected-pizza__bottom-panel{
+        gap: 12px;
+    }
+
+    .selected-pizza__price{
+        font-size: 15px;
+    }
+
+    .selected-pizza__count{
+        font-size: 15px;
+    }
+
+    .selected-pizza__control button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .selected-pizza__decrease{
+        font-size: 26px;
+    }
+
+    .selected-pizza__increase{
+        font-size: 22px;
+    }
+
+    .selected-pizza__remove {
+        font-size: 22px;
+    }
+
+    .summary__process{
+        padding: 15px 10px 5px;
+    }
+    .summary__process-title{
+        font-size: 18px;
+    }
+    .summary__process-sum {
+        font-size: 18px;
+    }
+    .summary__buy-button.button{
+        font-size: 18px;
+        margin: 10px auto 10px;
+    }
+}
+/*-----------------------------------------------------*/
+.button {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    padding: 0.6em 1em 0.5em;
+    color: var(--color-white);
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid var(--color-orange);
+
+    background: var(--color-orange-light);
+    background: var(--orange-gradient);
+
+    transition: .2s ease-in-out all;
+
+    cursor: pointer;
+}
+
+.button:hover {
+
+}
+
+
+.checkbox{
+
+}
+
+.checkbox label {
+    display: block;
+    padding: 12px 15px;
+    background-color: transparent;
+    color: var(--color-orange);
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: .1s ease-in-out all;
+}
+
+.checkbox input:checked + label {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+.checkbox > input {
+    width: 0;
+    height: 0;
+    display: none;
+}
+/*-----------------------------------------------------*/
+:root {
+    --color-orange: #ec7c10;
+    --color-orange-light: #eca73d;
+    --color-orange-dark: #b1661e;
+    --color-white: #ece9e9;
+    --color-white-2: #fbfbe9;
+    --color-gray: #a8a6a6;
+    --color-red: #b6372b;
+    --color-red-light: #a5554e;
+    --color-green: #417536;
+    --color-green-light: #6bb85a;
+    --color-black: #000;
+    --color-black-light: #252525;
+
+    --orange-gradient: linear-gradient(180deg, var(--color-orange-light) 0%, var(--color-orange) 100%);
+    --red-gradient: linear-gradient(180deg, var(--color-red-light) 0%, var(--color-red) 100%);
+    --green-gradient: linear-gradient(180deg, var(--color-green-light) 0%, var(--color-green) 100%);
+    --gray-gradient: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray) 100%);
+}
